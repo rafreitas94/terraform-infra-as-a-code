@@ -9,4 +9,5 @@ resource "aws_s3_object" "this" {
   key    = "config/${local.ip_filepath}"
   source = local.ip_filepath
   etag   = filemd5(local.ip_filepath)
+  content_type = "application/json"
 }
